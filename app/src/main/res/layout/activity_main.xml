@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".RegisterActivity" android:background="@android:color/holo_green_light">
+
+    <EditText
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:paddingLeft="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" android:id="@+id/etUsername"
+            android:background="@drawable/etrounded_register_login"
+            android:layout_marginTop="192dp" app:layout_constraintTop_toTopOf="parent" android:hint="USERNAME"
+            android:layout_marginStart="32dp" android:layout_marginEnd="32dp"
+            app:layout_constraintHorizontal_bias="0.0"/>
+    <EditText
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:inputType="textEmailAddress"
+            android:ems="10"
+            android:paddingLeft="16dp"
+            app:layout_constraintStart_toStartOf="@+id/etUsername"
+            app:layout_constraintEnd_toEndOf="@+id/etUsername" android:id="@+id/etEmail_Login"
+            android:layout_marginTop="4dp"
+            app:layout_constraintTop_toBottomOf="@+id/etUsername" app:layout_constraintHorizontal_bias="0.0"
+            android:background="@drawable/etrounded_register_login"
+            android:hint="EMAIL"/>
+    <EditText
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:paddingLeft="16dp"
+            android:id="@+id/etPassword_Login"
+            android:layout_marginTop="4dp"
+            app:layout_constraintTop_toBottomOf="@+id/etEmail_Login"
+            android:background="@drawable/etrounded_register_login"
+            app:layout_constraintStart_toStartOf="@+id/etUsername" app:layout_constraintEnd_toEndOf="@+id/etUsername"
+            android:hint="PASSWORD" app:layout_constraintHorizontal_bias="0.0"/>
+    <Button
+            android:text="REGISTER"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/buRegister"
+            android:background="@drawable/rounded_button"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/etPassword_Login"
+            app:layout_constraintStart_toStartOf="@+id/etPassword_Login"
+            app:layout_constraintEnd_toEndOf="@+id/etPassword_Login" app:layout_constraintHorizontal_bias="0.0"/>
+    <TextView
+            android:text="Already have an account ?"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvLoginPage" android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@+id/buRegister"
+            app:layout_constraintStart_toStartOf="@+id/buRegister" app:layout_constraintEnd_toEndOf="@+id/buRegister"
+            android:textSize="14sp" android:textColor="@android:color/white"
+            app:layout_constraintHorizontal_bias="0.503"/>
+    <Button
+            android:text="SELECT PHOTO"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:background="@drawable/rounded_photo"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:id="@+id/buSelectPhoto" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp" app:layout_constraintTop_toTopOf="parent"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView android:layout_width="150dp" android:layout_height="150dp"
+                                                  app:layout_constraintEnd_toEndOf="@+id/buSelectPhoto"
+                                                  app:civ_border_width="4dp"
+                                                  app:layout_constraintStart_toStartOf="@+id/buSelectPhoto"
+                                                  app:layout_constraintTop_toTopOf="@+id/buSelectPhoto"
+                                                  android:id="@+id/ivSelectPhoto"/>
+
+</android.support.constraint.ConstraintLayout>
